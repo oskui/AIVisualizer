@@ -3,10 +3,10 @@ AI Visualizer
 
 Quickstart
 ==========
-First create a folder at the same level as the "src" folder and name the newly created folder "mtd_videos". 
-Then load the MTD videos into this folder.
-We can send you these MTD videos on request.
-Note: The program currently only runs on a Linux operating system.
+First create a folder at the same level as the "src" folder and name the newly created folder "mtd_videos".   
+Then load the MTD videos into this folder.  
+We can send you these MTD videos on request.  
+Note: The program currently only runs on a Linux operating system.  
 
 Create virtual environment and install v_machine
 
