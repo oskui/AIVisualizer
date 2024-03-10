@@ -7,8 +7,7 @@ Quickstart
 - Then load the MTD videos into this folder.  
 - We can send you these MTD videos on request.  
 - Note: The program currently only runs on a Linux operating system.
-
-Create virtual environment and install v_machine
+- Create virtual environment and install v_machine
 
 First download repository.
 
