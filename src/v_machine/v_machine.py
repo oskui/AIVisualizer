@@ -20,6 +20,9 @@ from PyQt6.QtGui import QGuiApplication
 from PyQt6.QtCore import QTimer
 from type import mtd_video
 import scipy.fftpack
+import soundfile as sf
+from pydub import AudioSegment
+from pydub.playback import play
 
 sys.modules["mtd_video"] = mtd_video
 
@@ -674,8 +677,20 @@ def get_icon_directory(file_dir: str):
     icon_dir = os.path.join(sys._MEIPASS, "files/v_machine_icon.gif")
     return icon_dir
 
+# Function to play the sound in a loop
+def play_sound_in_loop(sound_file_path):
+    sound = AudioSegment.from_mp3(sound_file_path)
+    while True:
+        play(sound)
+
 
 if __name__ == "__main__":
+    if len(sys.argv) < 2:
+        print("Usage: python v_machine.py <path_to_sound_file>")
+        sys.exit(1)
+
+    sound_file_path = sys.argv[1]
+
     max_fps = 30
     file_dir = os.path.dirname(__file__)
     app = QApplication(sys.argv)
@@ -687,5 +702,11 @@ if __name__ == "__main__":
     gui.set_sound_monitor(sm)
     sm.run(sm.current_device_id)
     gui.show()
+
+    # Start playing the sound in a separate thread
+    sound_thread = threading.Thread(target=play_sound_in_loop, args=(sound_file_path,))
+    sound_thread.daemon = True
+    sound_thread.start()
+
     app.exec()
     sm.close()

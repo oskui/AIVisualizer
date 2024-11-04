@@ -25,7 +25,6 @@ Make virtual environment and install packages.
 
 .. code-block:: console
 
-    $ cd v_machine
     $ make venv
 
 
@@ -34,5 +33,5 @@ Activate virtual environment and run the following command to start
 .. code-block:: console
 
     $ source venv/bin/activate
-    $ python src/v_machine/v_machine.py
+    $ python src/v_machine/v_machine.py pathtothesoundfile
 

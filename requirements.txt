@@ -1,9 +1,13 @@
-sounddevice>=0.4.4
-Pillow>=8.4.0
-numpy>=1.19.5
+cffi==1.16.0
+numpy==1.26.4
+pillow==11.0.0
+PyAudio==0.2.14
+pycparser==2.21
+pydub==0.25.1
 PyQt6==6.4.2
 PyQt6-Qt6==6.4.2
-cffi==1.16.0
-pycparser==2.21
 PyQt6-sip==13.6.0
 scipy==1.12.0
+sounddevice==0.5.1
+soundfile==0.12.1
+-e git+https://github.com/oskui/AIVisualizer.git@8b08b857aad392c4e9abd29ed8e0e78c462f96e2#egg=v_machine
