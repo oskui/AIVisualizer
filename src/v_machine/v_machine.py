@@ -79,7 +79,7 @@ class GUI(QWidget):
         Aktiviert oder deaktiviert den Timer basierend auf dem übergebenen Zustand.
         :param state: True, um den Timer zu aktivieren, False, um ihn zu deaktivieren.
         """
-        self.timer_active = False
+        self.timer_active = True
 
         # Initialisiere einen Timer
         self.timer = QTimer()
@@ -87,7 +87,7 @@ class GUI(QWidget):
         self.timer.timeout.connect(self.load_next_video_timer)
         # Starte den Timer, wenn timer_active True ist
         if self.timer_active:
-            self.timer.start(45000)  # 45 Sekunden in Millisekunden umgerechnet
+            self.timer.start(420000)  # 7 Min in Millisekunden umgerechnet
 
         if len(self.all_video_paths) == 0:
             print(f"No MTD videos at {video_dir}")
